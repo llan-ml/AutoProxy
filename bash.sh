@@ -47,10 +47,10 @@ set_proxy() {
 
 	echo -n "" > bash_config.tmp
 
-	echo "http_proxy=\"http://${HTTP_HOST}:${HTTP_PORT}\"" >> bash_config.tmp
-	echo "https_proxy=\"https://${HTTPS_HOST}:${HTTPS_PORT}\"" >> bash_config.tmp
-	echo "HTTP_PROXY=\"http://${HTTP_HOST}:${HTTP_PORT}\"" >> bash_config.tmp
-	echo "HTTPS_PROXY=\"https://${HTTPS_HOST}:${HTTPS_PORT}\"" >> bash_config.tmp
+	echo "export http_proxy=\"http://${HTTP_HOST}:${HTTP_PORT}\"" >> bash_config.tmp
+	echo "export https_proxy=\"https://${HTTPS_HOST}:${HTTPS_PORT}\"" >> bash_config.tmp
+	echo "export HTTP_PROXY=\"http://${HTTP_HOST}:${HTTP_PORT}\"" >> bash_config.tmp
+	echo "export HTTPS_PROXY=\"https://${HTTPS_HOST}:${HTTPS_PORT}\"" >> bash_config.tmp
 
 	cat bash_config.tmp | tee -a $HOME/.bashrc > /dev/null
 	rm bash_config.tmp
