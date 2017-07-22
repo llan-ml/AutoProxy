@@ -8,7 +8,7 @@
 
 AUTOPROXY_PATH=$(dirname $0)
 cd ${AUTOPROXY_PATH}
-
+source proxy_setting.sh
 export HTTP_HOST=${HTTP_HOST:-""}
 export HTTP_PORT=${HTTP_PORT:-""}
 

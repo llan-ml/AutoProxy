@@ -1,7 +1,6 @@
 #!/bin/bash
 
 cd $(dirname $0)
-source proxy_setting.sh
 
 if [[ "$1" = "on" ]]; then
   sudo bash $2.sh set
